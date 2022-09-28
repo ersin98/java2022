@@ -1,0 +1,52 @@
+package classesWithAttributes;
+
+public class Product {
+	private int id;
+	private String name;
+	private String descritions;
+	private double price;
+	private int stockAmount;
+	private String yeniOzellik;
+	private String kod;
+	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getDescritions() {
+		return descritions;
+	}
+	public void setDescritions(String descritions) {
+		this.descritions = descritions;
+	}
+	public double getPrice() {
+		return price;
+	}
+	public void setPrice(double price) {
+		this.price = price;
+	}
+	public int getStockAmount() {
+		return stockAmount;
+	}
+	public void setStockAmount(int stockAmount) {
+		this.stockAmount = stockAmount;
+	}
+	public String getYeniOzellik() {
+		return yeniOzellik;
+	}
+	public void setYeniOzellik(String yeniOzellik) {
+		this.yeniOzellik = yeniOzellik;
+	}
+	public String getKod() {
+		return kod;
+	}
+
+}

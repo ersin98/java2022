@@ -1,0 +1,8 @@
+package classesWithAttributes;
+
+public class ProductManager {
+	public void add(Product product) {
+		// cbs
+		System.out.println("Urun eklendi " + product.name);
+	}
+}

@@ -1,0 +1,10 @@
+package reCapDemo_Classes;
+
+public class Main {
+
+	public static void main(String[] args) {
+		System.out.println("Musteri eklendi");
+		DortIslem dortIslem = new DortIslem();
+	}
+
+}
