@@ -1,0 +1,5 @@
+package haftaUcOdevBirYoutubeEgitim;
+
+public interface ICreditManager {
+
+}

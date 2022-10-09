@@ -1,0 +1,9 @@
+package inheritanceRepeat;
+
+public class EmployeManager {
+
+
+	public void BestEmployee() {
+		System.out.println("Ayın Elemanı Getirildi");
+	}
+}

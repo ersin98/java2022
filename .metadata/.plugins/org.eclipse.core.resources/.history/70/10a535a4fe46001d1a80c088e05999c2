@@ -1,0 +1,32 @@
+package haftaUcOdevBirYoutubeEgitim;
+
+public class Person extends Customer {
+	private int nationalIdentity;
+	private String firstName;
+	private String lastname;
+	private String companyName;
+
+	public int getId() {
+		return NationalIdentity;
+	}
+
+	public void setId(int NationalIdentity) {
+		this.NationalIdentity = NationalIdentity;
+	}
+
+	public String getFirstName() {
+		return "Sayin: " + FirstName;// pek kullanılmaz
+	}
+
+	public void setFirstName(String firstName) {
+		FirstName = firstName;
+	}
+
+	public String getLastname() {
+		return Lastname;
+	}
+
+	public void setLastname(String lastname) {
+		Lastname = lastname;
+	}
+}

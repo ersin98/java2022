@@ -1,0 +1,15 @@
+package haftaUcOdevBirYoutubeEgitim;
+
+public class MilitaryCredit implements ICreditManager {
+
+
+	public void calculate() {
+		System.out.println("Asker kredisi Hesaplandı");
+
+	}
+	
+	public void save() {
+
+	}
+
+}

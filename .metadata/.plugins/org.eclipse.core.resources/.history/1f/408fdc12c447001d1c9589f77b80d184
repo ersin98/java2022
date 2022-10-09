@@ -1,0 +1,8 @@
+package classesWithAttributesRepeat;
+
+public class ProductManager {
+	public void add() {
+//JDBC
+		System.out.println("urun eklendi");
+	}
+}

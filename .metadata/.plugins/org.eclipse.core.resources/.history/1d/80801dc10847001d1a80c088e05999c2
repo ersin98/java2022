@@ -1,0 +1,5 @@
+package haftaUcOdevBirYoutubeEgitim;
+
+public  class MilitaryCreditManager extends ICreditManager{
+
+}

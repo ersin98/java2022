@@ -1,7 +1,0 @@
-package inheritance;
-
-public class CustomerManager {
-	public void list() {
-		System.out.println("Müşteri Listelendi");
-	}
-}

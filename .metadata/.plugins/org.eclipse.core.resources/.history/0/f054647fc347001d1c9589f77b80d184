@@ -1,0 +1,7 @@
+package classesWithAttributesRepeat;
+
+public class ProductManager {
+	public void add() {
+		
+	}
+}

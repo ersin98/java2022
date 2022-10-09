@@ -1,0 +1,13 @@
+package haftaUcOdevBirYoutubeEgitim;
+
+public class Company extends Customer {
+	private String taxNumber;
+
+	public String getPerson() {
+		return taxNumber;
+	}
+
+	public void setPerson(String person) {
+		this.taxNumber = person;
+	}
+}

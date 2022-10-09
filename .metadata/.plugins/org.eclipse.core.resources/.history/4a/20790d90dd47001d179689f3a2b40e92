@@ -1,0 +1,5 @@
+package inheritanceRepeat;
+
+public class Employee {
+	double salary;
+}

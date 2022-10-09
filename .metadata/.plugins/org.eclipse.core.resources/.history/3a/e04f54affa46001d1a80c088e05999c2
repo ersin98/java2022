@@ -1,0 +1,21 @@
+package haftaUcOdevBirYoutubeEgitim;
+
+//Katmanlı Mimariler. Görevleri birbirinden ayır
+public class CustomerManager {
+	private Customer customer;// nesneyi her sınıfta kullanmak için lazım
+
+	public CustomerManager(Customer customer) {
+		this.customer = customer;// alınan nesneyi kullanmak için ürettiğimize eşitliyoruz
+	}
+
+	public CustomerManager() {
+	}
+
+	public void save(Customer customer) {
+		System.out.println("Kaydedildi : " + customer.getLastname());
+	}
+
+	public void delete() {
+		System.out.println("Silindi : " + customer.getLastname());
+	}
+}

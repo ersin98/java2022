@@ -1,0 +1,5 @@
+package inheritanceRepeat;
+
+public class CustomeManager extends PersonManager{
+
+}

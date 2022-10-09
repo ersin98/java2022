@@ -1,0 +1,7 @@
+package haftaUcOdevBirYoutubeEgitim;
+
+public class ICreditManager {
+	void calculate();// operasyonların içinde calculate olacak
+
+	void save();// operasyonların içinde save olacak
+}

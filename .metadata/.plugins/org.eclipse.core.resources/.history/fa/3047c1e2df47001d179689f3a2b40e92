@@ -1,0 +1,7 @@
+package inheritanceRepeat;
+
+public class CustomeManager {
+	public void list() {
+		System.out.println("Listelendi");
+	}
+}

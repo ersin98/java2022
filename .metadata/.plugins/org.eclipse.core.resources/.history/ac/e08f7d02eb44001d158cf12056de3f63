@@ -1,0 +1,5 @@
+package oopWithNLayerdApp.core.loggig;
+
+public class MainLogger {
+
+}

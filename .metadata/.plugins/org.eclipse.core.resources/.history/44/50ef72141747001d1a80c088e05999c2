@@ -1,0 +1,10 @@
+package haftaUcOdevBirYoutubeEgitim;
+
+public class BaseCreditManager {
+
+	public void save() {
+		System.out.println("Kaydedildi");
+
+	}
+
+}

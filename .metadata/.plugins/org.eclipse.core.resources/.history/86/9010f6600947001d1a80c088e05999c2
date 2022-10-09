@@ -1,0 +1,14 @@
+package haftaUcOdevBirYoutubeEgitim;
+
+public class TeacherCreditManager implements ICreditManager {
+
+	public void calculate() {
+
+	}
+
+	@Override
+	public void save() {
+
+	}
+
+}

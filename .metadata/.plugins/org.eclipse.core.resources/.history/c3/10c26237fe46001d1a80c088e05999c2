@@ -1,0 +1,13 @@
+package haftaUcOdevBirYoutubeEgitim;
+
+public class Person extends Customer {
+	private int NationalIdentity;
+
+	public int getId() {
+		return NationalIdentity;
+	}
+
+	public void setId(int NationalIdentity) {
+		this.NationalIdentity = NationalIdentity;
+	}
+}

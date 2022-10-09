@@ -1,0 +1,5 @@
+package inheritanceDemoRepeat;
+//UI = User interface. arka plandaki kodların arayüzde çağrılması
+public class KrediUI {
+
+}

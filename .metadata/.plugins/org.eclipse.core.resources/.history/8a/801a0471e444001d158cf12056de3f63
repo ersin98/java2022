@@ -1,0 +1,5 @@
+package oopWithNLayerdApp.dataAccess;
+
+public class HibernateProductDao {
+
+}

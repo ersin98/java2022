@@ -1,0 +1,13 @@
+package haftaUcOdevBirYoutubeEgitim;
+
+public class Company extends Customer {
+	private String person;
+
+	public String getPerson() {
+		return person;
+	}
+
+	public void setPerson(String person) {
+		this.person = person;
+	}
+}

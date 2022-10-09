@@ -1,0 +1,5 @@
+package classesWithAttributesRepeat;
+//ürün sınıfı
+public class Product {
+
+}

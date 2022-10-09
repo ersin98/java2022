@@ -1,0 +1,13 @@
+package haftaUcOdevBirYoutubeEgitim;
+
+public class TeacherCreditManager implements ICreditManager {//başka interface ler de olabilirdi
+//bir sınıf saece bir sınıfı inherit edebilir
+	public void calculate() {
+		System.out.println("Ogretmen kredi hesaplandı");
+	}
+
+	public void save() {
+
+	}
+
+}

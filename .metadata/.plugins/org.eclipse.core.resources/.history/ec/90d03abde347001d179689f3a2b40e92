@@ -1,0 +1,7 @@
+package inheritanceDemoRepeat;
+
+public class BaseKrediManager {
+	public void hesapla() {
+		
+	}
+}

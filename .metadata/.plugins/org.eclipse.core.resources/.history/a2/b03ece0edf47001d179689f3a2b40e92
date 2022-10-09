@@ -1,0 +1,13 @@
+package inheritanceRepeat;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Customer customer = new Customer();
+		// her iki sınıf da Person sınıfını miras alır. Yani ikisi de Person dur
+		// ancak
+		Employee employee = new Employee();
+
+	}
+
+}
