@@ -1,0 +1,12 @@
+package interfacesPolymorphism;
+
+public class CustomerManager {
+
+	//ICustomerDal customerDal;// bir önceki yöntem buydu. Yine işe yarar
+
+	public void add() {
+		// bu kısımda iş kodları yazılır
+
+		customerDal.add();
+	}
+}

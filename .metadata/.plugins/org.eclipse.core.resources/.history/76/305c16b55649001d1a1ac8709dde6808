@@ -1,0 +1,15 @@
+package polimorfizmRepeat;
+
+public class Main {
+	// polimorfizm çok biçimlilik demektir
+	// loglama
+	public static void main(String[] args) {
+		/*
+		 * EmailLogger emailLogger= new EmailLogger();
+		 * 
+		 * emailLogger.log("Log Mesaji");
+		 */
+		BaseLogger baseLogger = new BaseLogger();
+	}
+
+}

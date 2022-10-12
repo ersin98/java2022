@@ -1,0 +1,7 @@
+package staticDemo;
+
+public class DatabaseHelper {
+	public static class crud {
+
+	}
+}

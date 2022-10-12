@@ -1,0 +1,10 @@
+package polimorfizmRepeat;
+
+public class DatabaseLogger extends BaseLogger{
+	
+	//şu ksıım olmasa da BaseLogger dan çalışır.
+	//ancak burada yazarak overrride yani üzerine yazma işlemi yapmış oluyoruz
+	public void log(String message){
+		System.out.println("Logged t odatabase");
+	}
+}

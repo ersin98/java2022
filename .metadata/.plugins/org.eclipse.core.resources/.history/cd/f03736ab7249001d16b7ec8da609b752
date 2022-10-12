@@ -1,0 +1,13 @@
+package abstractDemo;
+
+public class CustomerManager {
+	BaseDatabaseManager databaseManager;
+
+	public void getCustomers() {
+
+		// böyle yazarsak OracleDatabase ye bağımlı yapar
+		// OracleDatabaseManager oracleDatabaseManager =new OracleDatabaseManager();
+		// oracleDatabaseManager.getData();
+
+	}
+}

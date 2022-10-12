@@ -1,0 +1,8 @@
+package polimorfizmRepeat;
+
+public class CustomerManager {
+	public void add() {
+		System.out.println("Musteri bu kisimda varitabanina eklendi");
+		//bu ekleme işlemini loglayacağız. kim ne zaman ekledi gibi bilgiler
+	}
+}

@@ -1,0 +1,17 @@
+package interfacesPolymorphism;
+
+public class CustomerManager {
+
+	ICustomerDal customerDal;
+
+	public CustomerManager(ICustomerDal customerDal) {//vermek zoruna bırakılıyro
+		// bir önceki yöntemde bu yoktu. bu şekilde unutulma ihtimalinini önüne geçilir
+		this.customerDal = customerDal;
+	}
+
+	public void add() {
+		// bu kısımda iş kodları yazılır
+
+		customerDal.add();
+	}
+}

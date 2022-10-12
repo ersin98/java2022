@@ -1,0 +1,11 @@
+package abstractClasses;
+//abstract = soyut
+//abstractClas = soyut sınıf
+
+public class Main {
+
+	public static void main(String[] args) {
+
+	}
+
+}

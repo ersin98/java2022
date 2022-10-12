@@ -1,0 +1,17 @@
+package polimorfizmRepeat;
+
+public class CustomerManager {
+	private BaseLogger baseLogger;
+	public CustomerManager() {
+		
+	}
+	public void add() {
+		System.out.println("Musteri bu kisimda varitabanina eklendi");
+		// bu ekleme işlemini loglayacağız. kim ne zaman ekledi gibi bilgiler
+
+		// Bu vağımlı bir sistemdir. Değişmesi gerektiğinde zorlar
+		// DatabaseLogger logger = new DatabaseLogger();
+		// logger.log("Log mesaji, CustomManagerde calisti");
+
+	}
+}

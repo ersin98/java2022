@@ -1,0 +1,16 @@
+package abstractClasses;
+
+public abstract class GameCalculator {
+	// burada tip değişkeni alıp if if diye birbirinin yerine geçebilen kodlar
+	// yazmayacağız
+	public abstract void hesapla();//
+
+	public final void gameOver() {
+		System.out.println("Oyun Bitti");
+	}
+	//game Over in üstüne yazılabilir hali
+	// public void gameOver() {
+	// System.out.println("Oyun Bitti");
+	// }
+	//
+}

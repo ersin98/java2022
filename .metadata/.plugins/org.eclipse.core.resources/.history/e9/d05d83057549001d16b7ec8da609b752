@@ -1,0 +1,12 @@
+package interfaces;
+
+public class Main {
+	// nesne yönelimli programlamada 3 temel vardır. class(sınıf) ,abstract
+	// class(soyut sınıf) ve interface(arayüz)
+	// interface tam olarak sınıf değildir ama referans tutabilir
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
