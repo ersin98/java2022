@@ -1,0 +1,6 @@
+package kodlamaIo;
+
+public interface ITeacher {
+
+	public addCourse
+}

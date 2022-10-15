@@ -1,0 +1,30 @@
+package kodlamaIo.dataAcces.CategoryDao;
+
+import kodlamaIo.entities.Category;
+import kodlamaIo.entities.Course;
+
+public class JdbcCategoryDao implements CategoryDao {
+
+	@Override
+	public void add(Category catagory) {
+		System.out.println("JDBC ile katagori veritabanına eklendi");
+	}
+
+	@Override
+	public Category select(Course course) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Category select(Course course, String parameter1) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Category select(Course course, int parameter1) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+}

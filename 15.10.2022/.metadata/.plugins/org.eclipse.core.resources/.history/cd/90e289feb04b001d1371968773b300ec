@@ -1,0 +1,8 @@
+package kodlamaIo.dataAcces.CourseDao;
+
+public class JdbCourseDao {
+	public void add() {
+		
+	}
+	
+}

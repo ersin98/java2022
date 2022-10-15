@@ -1,0 +1,11 @@
+package kodlamaIo.dataAcces.CategoryDao;
+
+import kodlamaIo.entities.Category;
+
+//birbirinin elternatifi durumlarda Interface
+public interface CategoryDao {
+
+	void add(Category category);
+	
+	Category select();
+}

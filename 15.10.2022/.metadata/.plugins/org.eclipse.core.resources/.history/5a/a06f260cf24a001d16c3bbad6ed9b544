@@ -1,0 +1,7 @@
+package kodlamaIo;
+
+public interface Teacher {
+
+	int maas;
+
+}

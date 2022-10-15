@@ -1,0 +1,9 @@
+package kodlamaIo;
+
+public interface ITeacher {
+
+	VOİD addCourse
+	{
+
+	}
+}

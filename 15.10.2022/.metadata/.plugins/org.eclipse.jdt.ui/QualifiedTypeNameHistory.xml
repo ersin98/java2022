@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="kodlamaIo.Teacher"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="kodlamaIo.dataAcces.CourseDao.JdbCourseDao"/>
+    <fullyQualifiedTypeName name="kodlamaIo.entities.Course"/>
+    <fullyQualifiedTypeName name="kodlamaIo.dataAcces.InstructorDao.JdbcInstructorDao"/>
+    <fullyQualifiedTypeName name="kodlamaIo.dataAcces.CourseDao.JdbcCourseDao"/>
+    <fullyQualifiedTypeName name="kodlamaIo.dataAcces.InstructorDao.InstructorDao"/>
+    <fullyQualifiedTypeName name="kodlamaIo.business.CourseManager"/>
+    <fullyQualifiedTypeName name="kodlamaIo.entities.Instructor"/>
+    <fullyQualifiedTypeName name="kodlamaIo.business.InstructorManager"/>
+    <fullyQualifiedTypeName name="kodlamaIo.dataAcces.InstructorDao.HibernateInstructorDao"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="java.lang.System.Logger"/>
+    <fullyQualifiedTypeName name="java.util.logging.Logger"/>
+    <fullyQualifiedTypeName name="kodlamaIo.common.logging.Logger"/>
+    <fullyQualifiedTypeName name="kodlamaIo.common.logging.MailLogger"/>
+    <fullyQualifiedTypeName name="kodlamaIo.common.logging.FileLogger"/>
+    <fullyQualifiedTypeName name="kodlamaIo.common.logging.DatabaseLogger"/>
+    <fullyQualifiedTypeName name="kodlamaIo.dataAcces.CategoryDao.JdbcCategoryDao"/>
+    <fullyQualifiedTypeName name="kodlamaIo.dataAcces.CourseDao.HibernateCourseDao"/>
+    <fullyQualifiedTypeName name="javax.xml.catalog.CatalogManager"/>
+    <fullyQualifiedTypeName name="kodlamaIo.business.CategoryManager"/>
+    <fullyQualifiedTypeName name="kodlamaIo.dataAcces.CategoryDao.HibernateCategoryDao"/>
+    <fullyQualifiedTypeName name="kodlamaIo.dataAcces.CourseDao.CourseDao"/>
+    <fullyQualifiedTypeName name="kodlamaIo.entities.Category"/>
+    <fullyQualifiedTypeName name="kodlamaIo.dataAcces.CategoryDao.CategoryDao"/>
+</qualifiedTypeNameHistroy>

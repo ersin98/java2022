@@ -1,0 +1,7 @@
+package kodlamaIo.dataAcces.CourseDao;
+
+import kodlamaIo.entities.Course;
+
+public interface CourseDao {
+	void add(Course course);
+}

@@ -1,0 +1,7 @@
+package kodlamaIo.dataAcces.InstructorDao;
+
+public class JdbInstructorDao {
+	public void add() {
+		System.out.println("JDB ile Instructor veri tabanına eklendi");
+	}
+}

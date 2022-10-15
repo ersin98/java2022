@@ -1,0 +1,6 @@
+package kodlamaIo.dataAcces.CategoryDao;
+
+//birbirinin elternatifi durumlarda Interface
+public interface CategoryDao {
+
+}

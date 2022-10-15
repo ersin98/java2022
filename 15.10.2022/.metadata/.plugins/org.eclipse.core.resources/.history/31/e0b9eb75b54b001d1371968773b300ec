@@ -1,0 +1,5 @@
+package kodlamaIo.dataAcces.CategoryDao;
+
+public interface CategoryDao {
+
+}

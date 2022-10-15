@@ -1,0 +1,12 @@
+package kodlamaIo;
+
+public interface ITeacher {
+
+	void addCourse();
+
+	void deleteCourse();
+
+	void blockstudent();
+
+	void blockteacher();
+}

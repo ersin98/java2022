@@ -1,0 +1,8 @@
+package kodlamaIo;
+
+public interface Teacher {
+
+	int salary;
+	Sting 
+
+}

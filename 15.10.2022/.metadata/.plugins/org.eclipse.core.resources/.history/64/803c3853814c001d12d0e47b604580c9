@@ -1,0 +1,43 @@
+package kodlamaIo.business;
+
+import kodlamaIo.common.logging.Logger;
+import kodlamaIo.dataAcces.CourseDao.CourseDao;
+import kodlamaIo.entities.Course;//entities yardımcı
+
+public class CourseManager {
+	private CourseDao courseDao;
+	private Logger[] loggers;
+
+	public CourseManager(CourseDao courseDao, Logger[] loggers) {
+		// bu interface ile uyumlu olması yeterli
+		this.courseDao = courseDao;
+		this.loggers = loggers;
+	}
+
+	public void add(Course course) throws Exception {// iş kuralları buraya
+//throw ile hata fırlattırılır
+
+		if (course.getPrice() < 0) {
+			throw new Exception("Kurs ucreti 0 dan küçük olamaz");
+		}
+		if (courseDao.select(course, course.getTitle()) != null) {
+			throw new Exception("Kurs adı tekrar edemez");
+		}
+		courseDao.add(course);
+		// enriries hariç bir katman başka katmanı kullanıyorken sadece interface inden
+		// etkileşim kurmalıdır
+
+		for (Logger logger : loggers) {
+			logger.log(course.getTitle());
+		}
+	}
+
+//	public Course select(Course course) {
+//		for (Logger logger : loggers) {
+//			logger.log("select: " + course.getTitle());
+//		}
+//		return courseDao.select(course, course.getTitle());
+//
+//	}
+
+}

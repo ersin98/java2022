@@ -1,0 +1,9 @@
+package kodlamaIo.entities;
+
+public class Course {
+	private int id;
+	private String title;
+	private String explanation;
+	private int price;
+	private int progress;
+}

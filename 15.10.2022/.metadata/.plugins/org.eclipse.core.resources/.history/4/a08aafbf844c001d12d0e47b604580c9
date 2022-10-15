@@ -1,0 +1,28 @@
+package kodlamaIo.business;
+
+import kodlamaIo.common.logging.Logger;
+import kodlamaIo.dataAcces.CategoryDao.CategoryDao;
+import kodlamaIo.entities.Category;
+
+public class CategoryManager {
+	CategoryDao categoryDao;
+	private Logger[] loggers;// List[] List<Logger>
+
+	public CategoryManager(CategoryDao categoryDao, Logger[] loggers) {
+		this.categoryDao = categoryDao;
+		this.loggers = loggers;
+
+	}
+
+	public void add(Category category) throws Exception {
+		Category bisey = new Category();
+		bisey = categoryDao.select(category, category.getName());
+		if (categoryDao.select(category, category.getName()) != null) {
+			throw new Exception("Kategori adı tekrar edemez");
+		}
+		for (Logger logger : loggers) {
+			logger.log(category.getName());
+		}
+	}
+
+}

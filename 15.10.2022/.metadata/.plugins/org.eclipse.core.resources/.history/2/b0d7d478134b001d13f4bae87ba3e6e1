@@ -1,0 +1,15 @@
+package kodlamaIo.entities;
+
+public class Category {
+	private int id;
+	private int name;
+
+	public Category() {
+	}
+
+	public Category(int id, int name) {
+		this.id = id;
+		this.name = name;
+	}
+
+}

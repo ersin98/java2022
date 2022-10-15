@@ -1,0 +1,5 @@
+package kodlamaIo;
+
+public class programming implements ICourse {
+
+}

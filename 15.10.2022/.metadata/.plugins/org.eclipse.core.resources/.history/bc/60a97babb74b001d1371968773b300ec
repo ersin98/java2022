@@ -1,0 +1,9 @@
+package kodlamaIo.dataAcces.CategoryDao;
+
+import kodlamaIo.entities.Category;
+
+public class JdbcCategoryDao {
+	public void add(Category catagory) {
+		System.out.println("JDBC ile katagori veritabanına eklendi");
+	}
+}

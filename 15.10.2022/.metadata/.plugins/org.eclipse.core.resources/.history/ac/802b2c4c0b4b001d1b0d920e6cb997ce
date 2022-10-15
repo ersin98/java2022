@@ -1,0 +1,9 @@
+package kodlamaIo.entities;
+
+public class Category {
+	int id;
+	String title;
+	String explanation;
+	int price;
+	int progress ;
+}

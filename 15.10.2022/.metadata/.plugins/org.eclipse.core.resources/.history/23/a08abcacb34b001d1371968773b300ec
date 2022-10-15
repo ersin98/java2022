@@ -1,0 +1,10 @@
+package kodlamaIo.business;
+
+import kodlamaIo.dataAcces.InstructorDao.JdbcInstructorDao;
+import kodlamaIo.entities.Instructor;
+
+public class InstructorManager {
+	public void add(Instructor instructor) {
+		JdbcInstructorDao jdbcInstructorDao= new JdbcInstructorDao();
+	}
+}

@@ -1,0 +1,46 @@
+package kodlamaIo;
+
+import kodlamaIo.business.CategoryManager;
+import kodlamaIo.business.CourseManager;
+import kodlamaIo.business.InstructorManager;
+import kodlamaIo.common.logging.DatabaseLogger;
+import kodlamaIo.common.logging.FileLogger;
+import kodlamaIo.common.logging.Logger;
+import kodlamaIo.common.logging.MailLogger;
+import kodlamaIo.dataAcces.CategoryDao.CategoryDao;
+import kodlamaIo.dataAcces.CategoryDao.HibernateCategoryDao;
+import kodlamaIo.dataAcces.CategoryDao.JdbcCategoryDao;
+import kodlamaIo.dataAcces.CourseDao.HibernateCourseDao;
+import kodlamaIo.dataAcces.InstructorDao.HibernateInstructorDao;
+import kodlamaIo.entities.Category;
+//import kodlamaIo.dataAcces.CourseDao.JdbcCourseDao;
+import kodlamaIo.entities.Course;
+import kodlamaIo.entities.Instructor;
+
+//katmanlı mimari kullanılmasının avantajı
+//daha iyi yönetmek ve sürdürülebilir kod yazmak
+
+//entities en son kullanıcının göreceği
+public class Main {
+
+	public static void main(String[] args) throws Exception {
+		Logger[] loggers = { new MailLogger(), new FileLogger(), new DatabaseLogger() };
+
+		Course course = new Course(1, "Yazılım Geliştirici Yetiştirme Kampı (C# + ANGULAR)",
+				"2 ay sürecek Yazılım Geliştirici Yetiştirme Kampımızın takip, döküman ve duyurularını buradan yapacağız.",
+				0);
+		// arayüz iş birimiyle iletişim kurar. Veritabanına gidemez
+		CourseManager courseManager = new CourseManager(new HibernateCourseDao(), loggers);// new JdbcCourseDao()
+		courseManager.add(course);
+
+		Category category = new Category(1, "Programlama ");
+		CategoryDao[] categoryDaos = { new JdbcCategoryDao(), new HibernateCategoryDao() };
+		CategoryManager categoryManager = new CategoryManager(new HibernateCourseDao(), loggers);
+		categoryManager.add(category);
+
+		Instructor instructor = new Instructor(1, "Engin", "Demirog");
+		InstructorManager instructorManager = new InstructorManager(new HibernateInstructorDao(), loggers);
+		instructorManager.add(instructor);
+	}
+
+}

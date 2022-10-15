@@ -1,0 +1,9 @@
+package kodlamaIo.business;
+
+import kodlamaIo.entities.Instructor;
+
+public class InstructorManager {
+	public void add(Instructor course) {
+				courseDao.add(course);
+			}
+}

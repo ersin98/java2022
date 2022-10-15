@@ -1,0 +1,29 @@
+package kodlamaIo.business;
+
+import kodlamaIo.common.logging.Logger;
+import kodlamaIo.dataAcces.CategoryDao.CategoryDao;
+import kodlamaIo.entities.Category;
+
+public class CategoryManager {
+	private CategoryDao[] categoryDaos;
+	private Logger[] loggers;// List[] List<Logger>
+
+	public CategoryManager(CategoryDao[] categoryDaos, Logger[] loggers) {
+		this.categoryDaos = categoryDaos;
+		this.loggers = loggers;
+		
+		
+		
+	}
+
+	public void add(CategoryDao[] categoryDaos) {
+		for (CategoryDao categoryDao : category) {
+			categoryDao.add(category);
+		}
+
+		/*
+		 * for (Logger logger : loggers) {// poliformizm budur
+		 * logger.log(category.getName()); }
+		 */
+	}
+}

@@ -1,0 +1,17 @@
+package kodlamaIo;
+
+public class EnginDemirog implements ITeacher {
+
+	@Override
+	public void addCourse() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void deleteCourse() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

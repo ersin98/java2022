@@ -1,0 +1,6 @@
+package kodlamaIo.entities;
+
+public class Instructor {
+	int id;
+	String firstName;
+}

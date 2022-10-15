@@ -1,0 +1,23 @@
+package kodlamaIo.business;
+
+import kodlamaIo.common.logging.Logger;
+import kodlamaIo.dataAcces.CategoryDao.CategoryDao;
+import kodlamaIo.entities.Instructor;
+
+public class CategoryManager {
+	CategoryDao categoryDao;
+	private Logger[] loggers;// List[] List<Logger>
+
+	public CategoryManager(CategoryDao categoryDao, Logger[] loggers) {
+		this.categoryDao = categoryDao;
+		this.loggers = loggers;
+
+	}
+
+	public void add(CategoryDao categoryDao) {
+		for (Logger logger : loggers) {
+			logger.log(instructor.getFirstName());
+		}
+	}
+
+}

@@ -1,0 +1,18 @@
+package kodlamaIo.business;
+
+import kodlamaIo.common.logging.Logger;
+import kodlamaIo.dataAcces.CategoryDao.CategoryDao;
+
+public class CategoryManager {
+	private CategoryDao[] categoryDaos;
+	private Logger[] loggers;// List[] List<Logger>
+
+	public CategoryManager(CategoryDao[] categoryDaos, Logger[] loggers) {
+		this.categoryDaos = categoryDaos;
+		this.loggers = loggers;
+
+		for (CategoryDao categoryDao : categoryDaos) {
+			
+		}
+	}
+}

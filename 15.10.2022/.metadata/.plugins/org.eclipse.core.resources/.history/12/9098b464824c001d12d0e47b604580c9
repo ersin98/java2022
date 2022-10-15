@@ -1,0 +1,32 @@
+package kodlamaIo.dataAcces.CategoryDao;
+
+import kodlamaIo.entities.Category;
+import kodlamaIo.entities.Course;
+
+public class HibernateCategoryDao implements CategoryDao {
+
+	@Override
+	public void add(Category category) {
+		System.out.println("Hibernate ile katagori veritabanına eklendi");
+
+	}
+
+	@Override
+	public Category select(Course course) {
+		System.out.println("Hibernateile katagori veritabanında arandı");
+		return null;
+	}
+
+	@Override
+	public Category select(Course course, String parameter1) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Category select(Course course, int parameter1) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

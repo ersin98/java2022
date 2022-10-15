@@ -1,0 +1,19 @@
+package kodlamaIo.entities;
+
+public class Instructor {
+	private int id;
+	private String firstName;
+	private String lastName;
+
+	public Instructor() {
+
+	}
+
+	public Instructor(int id, String firstName, String lastName) {
+		super();
+		this.id = id;
+		this.firstName = firstName;
+		this.lastName = lastName;
+	}
+
+}

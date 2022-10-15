@@ -1,0 +1,8 @@
+package kodlamaIo.dataAcces.CourseDao;
+
+public class JdbcCourseDao {
+	public void add() {
+		System.out.println("JDBC ile veritabanına eklendi");
+	}
+
+}

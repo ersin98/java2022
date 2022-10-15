@@ -1,0 +1,5 @@
+package kodlamaIo.dataAcces.CourseDao;
+
+public class HibernateCourseDao {
+
+}

@@ -1,0 +1,50 @@
+package kodlamaIo.entities;
+
+public class Course {
+	private int id;
+	private String title;
+	private String explanation;
+	private int price;
+	private int progress;
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
+	public String getExplanation() {
+		return explanation;
+	}
+
+	public void setExplanation(String explanation) {
+		this.explanation = explanation;
+	}
+
+	public int getPrice() {
+		return price;
+	}
+
+	public void setPrice(int price) {
+		this.price = price;
+	}
+
+	public int getProgress() {
+		return progress;
+	}
+
+	public void setProgress(int progress) {
+		this.progress = progress;
+	}
+
+}
