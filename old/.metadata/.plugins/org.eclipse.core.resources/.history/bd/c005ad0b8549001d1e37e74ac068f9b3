@@ -1,7 +1,0 @@
-package interfacesPolymorphism;
-
-public class CustomerManager {
-	public void add() {
-		
-	}
-}

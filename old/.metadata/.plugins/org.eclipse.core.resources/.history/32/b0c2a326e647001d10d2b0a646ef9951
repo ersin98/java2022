@@ -1,9 +1,0 @@
-package inheritanceDemoRepeat;
-
-//UI = User interface. arka plandaki kodların arayüzde çağrılması
-public class KrediUI {
-//Button Textbox gibi şeylerin bağlanması burda olur
-	public void krediHesapla(OgretmenKrediManager ogretmenKrediManager) {
-
-	}
-}

@@ -1,7 +1,0 @@
-package polimorfizmRepeat;
-
-public class CustomerManager {
-public void add() {
-	
-}
-}

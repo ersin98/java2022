@@ -1,7 +1,0 @@
-package abstractDemo;
-
-public class BaseDatabaseManager {
-public abstract void() {
-	
-}
-}

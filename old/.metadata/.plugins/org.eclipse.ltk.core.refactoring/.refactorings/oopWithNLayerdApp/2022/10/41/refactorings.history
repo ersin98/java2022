@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename type &apos;oopWithNLayerdApp.core.loggig.MainLogger&apos; to &apos;MailLogger&apos;&#x0D;&#x0A;- Original project: &apos;oopWithNLayerdApp&apos;&#x0D;&#x0A;- Original element: &apos;oopWithNLayerdApp.core.loggig.MainLogger&apos;&#x0D;&#x0A;- Renamed element: &apos;oopWithNLayerdApp.core.loggig.MailLogger&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;MainLogger&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;oopWithNLayerdApp.core.loggig{MainLogger.java[MainLogger" matchStrategy="1" name="MailLogger" qualified="false" references="true" similarDeclarations="false" stamp="1665002885670" textual="false" version="1.0"/>
-</session>

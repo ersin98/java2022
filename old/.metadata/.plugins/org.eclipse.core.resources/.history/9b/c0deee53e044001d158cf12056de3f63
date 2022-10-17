@@ -1,7 +1,0 @@
-package oopWithNLayerdApp.dataAccess;
-
-public class JdbcProductDao {
-	public void add() {
-		
-	}
-}

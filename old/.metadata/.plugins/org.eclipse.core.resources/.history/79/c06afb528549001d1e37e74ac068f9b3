@@ -1,9 +1,0 @@
-package interfacesPolymorphism;
-
-public class CustomerManager {
-	
-	ICustomerDal customerDal;//bir önceki yöntem
-	public void add() {
-		// bu kısımda iş kodları yazılır
-	}
-}

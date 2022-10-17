@@ -1,7 +1,0 @@
-package inheritanceRepeat;
-
-public class CustomeManager {
-	public void list() {
-		
-	}
-}

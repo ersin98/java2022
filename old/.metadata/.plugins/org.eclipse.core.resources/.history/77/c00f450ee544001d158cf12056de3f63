@@ -1,5 +1,0 @@
-package oopWithNLayerdApp.dataAccess;
-
-public interface ProductDao {
-void add();
-}

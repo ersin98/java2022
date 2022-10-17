@@ -1,5 +1,0 @@
-package interfacesDemo;
-
-public interface IPayable {
-
-}

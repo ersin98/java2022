@@ -1,6 +1,0 @@
-package inheritanceDemoRepeat;
-
-//Inherit etmek ve extend etmek aynı şeydir
-public class OgretmenKrediManager extends BaseKrediManager {
-
-}

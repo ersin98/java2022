@@ -1,7 +1,0 @@
-package interfaces;
-
-//interface bir sınıf değildir
-//sadece referans tutar
-public interface ICustomerDal {
-	void add();
-}

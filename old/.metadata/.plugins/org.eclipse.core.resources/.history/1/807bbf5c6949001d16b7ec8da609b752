@@ -1,8 +1,0 @@
-package abstractClasses;
-
-public class GameCalculator {
-	//burada tip değişkeni alıp if if diye birbirinin yerine geçebilen kodlar yazmayacağız
-	public void hesapla() {
-		System.out.println("Puanunız : 100");
-	}
-}

@@ -1,8 +1,0 @@
-package interfacesPolymorphism;
-
-public class CustomerManager {
-
-	public void add() {
-		// bu kısımda iş kodları yazılır
-	}
-}

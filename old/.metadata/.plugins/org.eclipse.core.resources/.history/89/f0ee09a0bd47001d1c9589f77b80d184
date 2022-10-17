@@ -1,9 +1,0 @@
-package classesWithAttributesRepeat;
-
-//ürün sınıfı. Sınıf adında Manager olmamamasının sebebi bir işlem yapmaması
-//burada ürünün özellikleri tanımlanır
-public class Product {
-	String name;
-	String description;// açıklama
-	
-}

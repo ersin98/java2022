@@ -1,5 +1,0 @@
-package interfaces;
-//isimdeki Dal  data access den gelir
-public class MySqlCustomerDal {
-
-}

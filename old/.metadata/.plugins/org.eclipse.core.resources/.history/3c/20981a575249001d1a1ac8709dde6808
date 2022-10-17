@@ -1,7 +1,0 @@
-package polimorfizmRepeat;
-//her zaman bir base olacak
-public class BaseLogger {
-	public void Log{
-		
-	}
-}

@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Encapsulate field &apos;classesWithAttributesRepeat.Product.kodu&apos; in &apos;classesWithAttributesRepeat.Product&apos;&#x0D;&#x0A;- Original project: &apos;classesWithAttributesRepeat&apos;&#x0D;&#x0A;- Original element: &apos;classesWithAttributesRepeat.Product.kodu&apos;&#x0D;&#x0A;- Getter method name: &apos;getKodu&apos;&#x0D;&#x0A;- Setter method name: &apos;setKodu&apos;&#x0D;&#x0A;- Field visibility: &apos;public&apos;&#x0D;&#x0A;- Use getter and setter methods in declaring type" comments="false" declaring="true" description="Encapsulate field &apos;kodu&apos;" flags="589830" getter="getKodu" id="org.eclipse.jdt.ui.self.encapsulate" input="/src&lt;classesWithAttributesRepeat{Product.java[Product^kodu" insertion="11" setter="setKodu" stamp="1665318018587" version="1.0" visibility="1"/>
-</session>

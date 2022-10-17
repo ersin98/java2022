@@ -1,6 +1,0 @@
-package inheritance;
-
-public interface ICreditManager {
-	void calculate();//operasyonların içinde calculate olacak
-	
-}

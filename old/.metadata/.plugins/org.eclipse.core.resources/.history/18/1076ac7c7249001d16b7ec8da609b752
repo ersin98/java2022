@@ -1,7 +1,0 @@
-package abstractDemo;
-
-public class CustomerManager {
-	public void getCustomers() {
-
-	}
-}

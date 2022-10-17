@@ -1,5 +1,0 @@
-package haftaUcOdevBirYoutubeEgitim;
-
-public class Company extends Customer {
-	private String person;
-}

@@ -1,6 +1,0 @@
-package oopWithNLayerdApp.core.loggig;
-
-public interface Logger {
-	void log(String data);
-
-}

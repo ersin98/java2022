@@ -1,6 +1,0 @@
-package classesWithAttributesRepeat;
-
-//ürün sınıfı. Sınıf adında Manager olmamamasının sebebi bir işlem yapmaması
-public class Product {
-
-}
