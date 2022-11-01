@@ -1,0 +1,63 @@
+package kodlama.io.Kodlama.io.Devs.business.concretes;
+
+import java.util.List;
+
+import kodlama.io.Kodlama.io.Devs.business.abstracts.CodingLanguegeService;
+import kodlama.io.Kodlama.io.Devs.dataAccess.abstracts.CodingLanguageRepository;
+import kodlama.io.Kodlama.io.Devs.entities.concretes.CodingLanguage;
+
+public class CodingLanguegeManager implements CodingLanguegeService {
+	private CodingLanguageRepository codingLanguageRepository;// bir repository oluştur
+
+	public CodingLanguegeManager(CodingLanguageRepository codingLanguageRepository) {// her çalıştığında repository iste
+		// iş kuralım için bir repository ver dedik.
+		super();
+		this.codingLanguageRepository = codingLanguageRepository;// onu kendi repository in ile eşitle
+	}
+
+	@Override
+	public void addCodingLanguage(CodingLanguage codingLanguage) throws Exception {
+		// inmemory burada new lenemez. interface dışında dataacces den bağımsız olmalı
+		isItEmpty(codingLanguage);
+		codingLanguageRepository.addCodingLanguege(codingLanguage);
+	}
+
+	@Override
+	public void updateCodingLangue(CodingLanguage codingLanguege) throws Exception {
+		isItEmpty(codingLanguege);
+		codingLanguageRepository.updateCodingLanguege(codingLanguege);
+	}
+
+	private void isItEmpty(CodingLanguage codingLanguage) throws Exception {
+		if (codingLanguage.getName() == null || codingLanguage.getName().isBlank()
+				|| codingLanguage.getName().isEmpty()) {
+			throw new Exception("Dil ismi boş geçilemez");
+		}
+		List<CodingLanguage> codingLengueges = codingLanguageRepository.listAll();// repository den hepsini al bir
+																					// listeye koy
+		for (CodingLanguage codingLanguage2 : codingLengueges) {
+			if (codingLanguage == codingLanguage2) {// seçilen ile eşitse hata fırlat
+				throw new Exception("Dil tekrar edemez");
+			}
+		}
+	}
+
+	// alltakilerin iş kuralı yok sadece çağırıyorlar
+
+	@Override
+	public void deleteCodingLangue(int id) {
+		codingLanguageRepository.deleteCodingLanguege(id);
+
+	}
+
+	@Override
+	public List<CodingLanguage> listAll() {
+		return codingLanguageRepository.listAll();
+	}
+
+	@Override
+	public CodingLanguage getById(int id) {
+		return codingLanguageRepository.getById(id);
+	}
+
+}

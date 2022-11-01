@@ -1,0 +1,20 @@
+package kodlama.io.Kodlama.io.Devs.entities.concretes;
+
+public class CodingLanguage {
+	private int id;
+	private String name;
+	
+	public CodingLanguage() {//sağ tık,Source, Generate  Constructor.
+		//içine item seçmedik
+		super();
+	}
+
+	public CodingLanguage(int id, String name) {
+		//aynı işlemde bu sefer itemleri seçtik
+		super();
+		this.id = id;
+		this.name = name;
+	}
+	
+	
+}

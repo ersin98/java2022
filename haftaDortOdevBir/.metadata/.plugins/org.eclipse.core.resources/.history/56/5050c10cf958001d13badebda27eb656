@@ -1,0 +1,5 @@
+package kodlama.io.Kodlama.io.Devs.dataAccess.concretes;
+//burası iş yapan kısım
+public class InMemoryCodingLanguageRepository {//in memory olmasının sebebi bellekte çalışılacak olması
+
+}

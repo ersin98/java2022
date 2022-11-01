@@ -1,0 +1,10 @@
+package kodlama.io.Kodlama.io.Devs.business.abstracts;
+import java.util.List;
+
+import kodlama.io.Kodlama.io.Devs.entities.concretes.CodingLanguage;
+
+public interface CodingLanguegeService {
+	
+ void addCodingLanguage(CodingLanguage codingLanguage, List<CodingLanguage>codingLanguages) throws Exception;//İsimler tekrar edemez. ve programlama dili boş geçilemez
+ 
+}

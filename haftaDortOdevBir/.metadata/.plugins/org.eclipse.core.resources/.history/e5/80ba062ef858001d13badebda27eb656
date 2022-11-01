@@ -1,0 +1,13 @@
+package kodlama.io.Kodlama.io.Devs.dataAccess.abstracts;
+
+import kodlama.io.Kodlama.io.Devs.entities.concretes.CodingLanguage;
+
+public interface CodingLanguageRepository {
+	//kod işlemleri
+	CodingLanguage[]listAll();
+	CodingLanguage[]getById(int id);
+	CodingLanguage deleteCodingLanguege(int id);
+	
+	CodingLanguage updateCodingLanguege(CodingLanguage codingLanguage);
+	CodingLanguage addCodingLanguege(CodingLanguage codingLanguage);
+}

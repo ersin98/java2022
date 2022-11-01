@@ -1,0 +1,42 @@
+package kodlama.io.Kodlama.io.Devs.dataAccess.concretes;
+
+import java.util.List;
+
+import kodlama.io.Kodlama.io.Devs.dataAccess.abstracts.CodingLanguageRepository;
+import kodlama.io.Kodlama.io.Devs.entities.concretes.CodingLanguage;
+
+//burası iş yapan kısım
+public class InMemoryCodingLanguageRepository implements CodingLanguageRepository {//in memory olmasının sebebi bellekte çalışılacak olması
+
+	List<CodingLanguage>codingLanguage;
+	@Override
+	public List<CodingLanguage> listAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<CodingLanguage> getById(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public CodingLanguage deleteCodingLanguege(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public CodingLanguage updateCodingLanguege(CodingLanguage codingLanguage) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public CodingLanguage addCodingLanguege(CodingLanguage codingLanguage) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

@@ -1,0 +1,5 @@
+package kodlama.io.Kodlama.io.Devs.dataAccess.abstracts;
+//veritabanı işleri yapacak sınıflara Repository veya Deo diye  adlandırabilirsin
+public interface ProgrammingLanguagesRepository {
+
+}

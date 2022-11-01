@@ -1,0 +1,19 @@
+package kodlama.io.Kodlama.io.Devs.webApi.controllers;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import kodlama.io.Kodlama.io.Devs.business.abstracts.CodingLanguegeService;
+
+@RestController
+@RequestMapping("/api/CodingLanguages")
+public class CodingLanguagesController {
+	// annotation yani anotasyon yaptık. Yani rest kontroller e buranın
+	// erişim noktası olduğunu dedik.
+	private CodingLanguegeService codingLanguegeService;
+
+	public CodingLanguagesController(CodingLanguegeService codingLanguegeService) {
+		this.codingLanguegeService = codingLanguegeService;
+	}
+
+}

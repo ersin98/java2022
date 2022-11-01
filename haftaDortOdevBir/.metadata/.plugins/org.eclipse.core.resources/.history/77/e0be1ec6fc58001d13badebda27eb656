@@ -1,0 +1,51 @@
+package kodlama.io.Kodlama.io.Devs.dataAccess.concretes;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import kodlama.io.Kodlama.io.Devs.dataAccess.abstracts.CodingLanguageRepository;
+import kodlama.io.Kodlama.io.Devs.entities.concretes.CodingLanguage;
+
+//burası iş yapan kısım
+public class InMemoryCodingLanguageRepository implements CodingLanguageRepository {//in memory olmasının sebebi bellekte çalışılacak olması
+
+	List<CodingLanguage>codingLanguage;//işlemler içerisinde listeye ulaşabilmek için global içerisine tanımladık
+	
+	public InMemoryCodingLanguageRepository() {// in memory i malıştıran bu kısmı da çalıştıracak
+		
+	codingLanguage = new ArrayList<CodingLanguage>();//boş bir dil listesi al
+	//veritabanında çekilmediği için kendimiz dolduruyoruz
+	
+	codingLanguage.add(new CodingLanguage(1, "C#"));//listeye bir kod dili ekle, parametreleri şunlar...
+	codingLanguage.add(new CodingLanguage(2, "Java"));
+	codingLanguage.add(new CodingLanguage(2, "Python"));
+}
+
+	@Override
+	public List<CodingLanguage> listAll() {
+		
+		return codingLanguage;
+	}
+
+	@Override
+	public List<CodingLanguage> getById(int id) {
+		
+		return null;
+	}
+
+	@Override
+	public CodingLanguage deleteCodingLanguege(int id) {
+		return null;
+	}
+
+	@Override
+	public CodingLanguage updateCodingLanguege(CodingLanguage codingLanguage) {
+		return null;
+	}
+
+	@Override
+	public CodingLanguage addCodingLanguege(CodingLanguage codingLanguage) {
+		return null;
+	}
+
+}

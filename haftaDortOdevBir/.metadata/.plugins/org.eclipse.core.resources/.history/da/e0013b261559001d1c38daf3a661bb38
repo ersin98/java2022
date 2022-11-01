@@ -1,0 +1,11 @@
+package kodlama.io.Kodlama.io.Devs.business.abstracts;
+import java.util.List;
+import kodlama.io.Kodlama.io.Devs.entities.concretes.CodingLanguage;
+
+public interface CodingLanguegeService {
+	
+ List<CodingLanguage> listAll();
+ 
+ void addCodingLanguage(CodingLanguage codingLanguage);
+ 
+}

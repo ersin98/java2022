@@ -1,0 +1,33 @@
+package kodlama.io.Kodlama.io.Devs.business.concretes;
+
+import java.util.List;
+
+import kodlama.io.Kodlama.io.Devs.business.abstracts.CodingLanguegeService;
+import kodlama.io.Kodlama.io.Devs.dataAccess.abstracts.CodingLanguageRepository;
+import kodlama.io.Kodlama.io.Devs.entities.concretes.CodingLanguage;
+
+public class CodingLanguegeManager implements CodingLanguegeService{
+	private CodingLanguageRepository codingLanguageRepository;//bir repository oluştur
+	public CodingLanguegeManager(CodingLanguageRepository codingLanguageRepository) {//her çalıştığında repository iste
+		//iş kuralım için bir repository ver dedik.
+		super();
+		this.codingLanguageRepository = codingLanguageRepository;//onu kendi repository in ile eşitle
+	}
+
+
+	@Override
+	public void addCodingLanguage(CodingLanguage codingLanguage, CodingLanguageRepository codingLanguageRepository) throws Exception  {
+		//inmemory burada new lenemez.  interface dışında dataacces den bağımsız olmalı
+		if(codingLanguage.getName()==null ||codingLanguage.getName().isBlank()||codingLanguage.getName().isEmpty()) {
+				throw new Exception("Dil ismi boş geçilemez");
+		}
+		
+		
+		
+		
+		
+		this.codingLanguageRepository.addCodingLanguege(codingLanguage);
+	}
+
+	
+}

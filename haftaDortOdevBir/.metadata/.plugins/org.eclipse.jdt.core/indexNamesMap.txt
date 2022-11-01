@@ -1,0 +1,3 @@
+INDEX VERSION 1.131
+file:/D:/calisma/java2022/haftaDortOdevBir/.metadata/.plugins/org.eclipse.jdt.core/1865797976.index
+meta_index

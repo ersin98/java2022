@@ -1,0 +1,6 @@
+package kodlama.io.Kodlama.io.Devs.business.abstracts;
+import java.util.List;
+
+public interface CodingLanguegeService {
+	//List<CondingLanguage> listAll();
+}
