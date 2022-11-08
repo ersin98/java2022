@@ -1,0 +1,5 @@
+package kodlama.io.Kodlama.io.Devs.business.requests.CodingLanguageSubTechnologyRequests;
+
+public class CreateCodingLanguageSubTechnologRequest {
+
+}

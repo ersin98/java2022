@@ -1,0 +1,13 @@
+package kodlama.io.Kodlama.io.Devs.business.abstracts;
+
+import kodlama.io.Kodlama.io.Devs.entities.CodingLanguageSubTechnology;
+
+public interface CodingLanguageSubTechnologyService {
+	void updateCodingLanguageSubTechnology(CodingLanguageSubTechnology codingLanguageSubTechnology) throws Exception;
+
+	void addCodingLanguageSubTechnology(CodingLanguageSubTechnology codingLanguageSubTechnology) throws Exception;
+	
+	void deleteCodingLanguageSubTechnology(CodingLanguageSubTechnology codingLanguageSubTechnology);
+	
+	
+}

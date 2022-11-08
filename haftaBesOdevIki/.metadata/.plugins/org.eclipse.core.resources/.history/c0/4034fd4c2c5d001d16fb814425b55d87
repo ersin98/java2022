@@ -1,0 +1,6 @@
+package kodlama.io.Kodlama.io.Devs.business.requests;
+
+public class CreateCodingLangueRequest {
+//son kullanıcıdan ( insan veya başka sistem) alınan bilgiler
+	private String name;
+}

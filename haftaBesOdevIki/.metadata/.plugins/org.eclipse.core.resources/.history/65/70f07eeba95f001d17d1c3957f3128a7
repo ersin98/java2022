@@ -1,0 +1,16 @@
+package kodlama.io.Kodlama.io.Devs.business.responses.CodingLanguageResponses;
+
+import kodlama.io.Kodlama.io.Devs.business.responses.CodingLanguageSubTechnologyResponses.GetAllCodingLanguageSubTechnogyResponse;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class GetByIdCodingLanguageResponse {
+	private int id;// sonra incele
+	private String name;
+	private GetAllCodingLanguageSubTechnogyResponse codingLanguageSubTechnogyResponse;
+
+}

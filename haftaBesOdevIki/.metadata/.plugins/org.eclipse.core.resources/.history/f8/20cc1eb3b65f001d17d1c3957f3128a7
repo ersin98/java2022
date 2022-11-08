@@ -1,0 +1,164 @@
+package kodlama.io.Kodlama.io.Devs.business.concretes;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import kodlama.io.Kodlama.io.Devs.business.abstracts.CodingLanguageService;
+import kodlama.io.Kodlama.io.Devs.business.requests.CodingLangueRequests.CreateCodingLanguageRequest;
+import kodlama.io.Kodlama.io.Devs.business.requests.CodingLangueRequests.DeleteCodingLanguageRequest;
+import kodlama.io.Kodlama.io.Devs.business.requests.CodingLangueRequests.UpdateCodingLanguageRequest;
+import kodlama.io.Kodlama.io.Devs.business.responses.CodingLanguageResponses.GetAllCodingLanguagesResponse;
+import kodlama.io.Kodlama.io.Devs.business.responses.CodingLanguageResponses.GetByIdCodingLanguageResponse;
+import kodlama.io.Kodlama.io.Devs.business.responses.CodingLanguageSubTechnologyResponses.GetAllCodingLanguageSubTechnologyResponse;
+import kodlama.io.Kodlama.io.Devs.dataAccess.abstracts.CodingLanguageRepository;
+import kodlama.io.Kodlama.io.Devs.dataAccess.abstracts.CodingLanguageSubTechnologyRespository;
+import kodlama.io.Kodlama.io.Devs.entities.CodingLanguage;
+import kodlama.io.Kodlama.io.Devs.entities.CodingLanguageSubTechnology;
+
+@Service
+public class CodingLanguegeManager implements CodingLanguageService {
+	private CodingLanguageRepository codingLanguageRepository;// bir repository oluştur
+	private CodingLanguageSubTechnologyRespository codingLanguageSubTechnologyRespository;
+
+	@Autowired
+	public CodingLanguegeManager(CodingLanguageRepository codingLanguageRepository,
+			CodingLanguageSubTechnologyRespository codingLanguageSubTechnologyRespository) {
+		super();
+		this.codingLanguageSubTechnologyRespository = codingLanguageSubTechnologyRespository;
+		this.codingLanguageRepository = codingLanguageRepository;
+	}
+
+	@Override
+	public void addCodingLanguage(CreateCodingLanguageRequest createCodingLanguageRequest) throws Exception {
+		List<CodingLanguage> codingLanguages = codingLanguageRepository.findAll();
+		CodingLanguage codingLanguage = new CodingLanguage();
+
+		if (createCodingLanguageRequest.getName() == null || createCodingLanguageRequest.getName().isBlank()
+				|| createCodingLanguageRequest.getName().isEmpty()) {// boş mu değil mi kontrolü
+			throw new Exception("Dil ismi boş geçilemez");
+		}
+
+		for (CodingLanguage codingLanguage2 : codingLanguages) {// dil adı daha önce var mıydı kontrolü
+			if (createCodingLanguageRequest.getName().equalsIgnoreCase(codingLanguage2.getName())) {
+				throw new Exception("Dil tekrar edemez");
+			}
+		}
+
+		codingLanguage.setName(createCodingLanguageRequest.getName());
+		codingLanguageRepository.save(codingLanguage);
+
+	}
+
+	@Override
+	public void updateCodingLangue(UpdateCodingLanguageRequest updateCodingLanguageRequest) throws Exception {
+		List<CodingLanguage> codingLanguages = codingLanguageRepository.findAll();
+		Optional<CodingLanguage> codingLanguageSelectedRepository = codingLanguageRepository
+				.findById(updateCodingLanguageRequest.getId());
+
+		if (updateCodingLanguageRequest.getName() == null || updateCodingLanguageRequest.getName().isBlank()
+				|| updateCodingLanguageRequest.getName().isEmpty()) {// isim boş mu
+			throw new Exception("Yeni isim boş geçilemez");
+		}
+
+		for (CodingLanguage codingLanguage2 : codingLanguages) {// daha önce isim var mıydı
+			if (updateCodingLanguageRequest.getName().equalsIgnoreCase(codingLanguage2.getName())) {
+				throw new Exception("Dil ismi başka kayıt için kullanılmış");
+			}
+		}
+		Boolean key = true;
+		for (CodingLanguage codingLanguage2 : codingLanguages) {
+			if (updateCodingLanguageRequest.getId() == codingLanguage2.getId()) {
+				CodingLanguage codingLanguageUpdate = codingLanguageSelectedRepository.get();
+				codingLanguageUpdate.setName(updateCodingLanguageRequest.getName());
+				codingLanguageRepository.save(codingLanguageUpdate);
+				key = false;
+			}
+		}
+		if (key)
+			throw new Exception("Girilen id ile eşleşen kayıt bulunamadı");
+
+	}
+
+	@Override
+	public void deleteCodingLangue(DeleteCodingLanguageRequest deleteCodingLanguageRequest) {
+		Optional<CodingLanguage> codingLanguage = codingLanguageRepository
+				.findById(deleteCodingLanguageRequest.getId());
+		CodingLanguage codinLanguagedelete = codingLanguage.get();
+		codingLanguageRepository.delete(codinLanguagedelete);
+		// kendi repository görevlerimiz yerine Jpa dan implement
+		// ettiklerimizi çalıştırıyoruz
+	}
+
+	@Override
+	public List<GetAllCodingLanguagesResponse> listAll() {
+		// gelen dillerin listesi
+		List<GetAllCodingLanguagesResponse> codinLangueResponse = new ArrayList<GetAllCodingLanguagesResponse>();
+
+		// dillerin tamamının veritabanından gelmiş hali
+		List<CodingLanguage> codingLanguages = codingLanguageRepository.findAll();
+
+		// alt dillerin veritabanından gelmiş hali
+		List<CodingLanguageSubTechnology> codingLanguageSubTechnologiesRespository = codingLanguageSubTechnologyRespository
+				.findAll();
+
+		for (CodingLanguage codingLanguage : codingLanguages) {// Dillerin her birini dolaş
+
+			GetAllCodingLanguagesResponse codinLanguageResponseItem = new GetAllCodingLanguagesResponse();
+
+			List<GetAllCodingLanguageSubTechnologyResponse> codingLanguageSubTechnologiesResponse = new ArrayList<GetAllCodingLanguageSubTechnologyResponse>();
+
+			for (CodingLanguageSubTechnology codingLanguageSubTechnology : codingLanguageSubTechnologiesRespository) {
+
+				if (codingLanguageSubTechnology.getCodinglanguage().getId() == codingLanguage.getId()) {
+
+					codingLanguageSubTechnologiesResponse.add(new GetAllCodingLanguageSubTechnologyResponse(
+							codingLanguageSubTechnology.getId(), codingLanguageSubTechnology.getName(),
+							codingLanguageSubTechnology.getCodinglanguage().getId()));
+				}
+
+			}
+			codinLanguageResponseItem.setId(codingLanguage.getId());
+			codinLanguageResponseItem.setName(codingLanguage.getName());
+			codinLanguageResponseItem.setAllCodingLanguageSubTechnogyResponses(codingLanguageSubTechnologiesResponse);
+			codinLangueResponse.add(codinLanguageResponseItem);
+
+		}
+		return codinLangueResponse;
+	}
+
+	@Override
+	public GetByIdCodingLanguageResponse getById(int id) {
+		Optional<CodingLanguage> codingLanguage = codingLanguageRepository.findById(id);
+		CodingLanguage codingLanguagegetById = codingLanguage.get();
+		GetByIdCodingLanguageResponse codinLanguageResponse = new GetByIdCodingLanguageResponse();
+
+		List<CodingLanguageSubTechnology> codingLanguageSubTechnology = codingLanguageSubTechnologyRespository
+				.findAll();
+		List<GetAllCodingLanguageSubTechnologyResponse> allCodingLanguageSubTechnologyResponses = new ArrayList<GetAllCodingLanguageSubTechnologyResponse>();
+
+		for (CodingLanguageSubTechnology codingLanguageSubTechnology2 : codingLanguageSubTechnology) {
+			if (codingLanguageSubTechnology2.getCodinglanguage().getId() == codingLanguagegetById.getId()) {
+
+				List<GetAllCodingLanguageSubTechnologyResponse> newGetAllLanguageSubTechnologyReasponses = new ArrayList<GetAllCodingLanguageSubTechnologyResponse>();
+
+				for (GetAllCodingLanguageSubTechnologyResponse newGetAllLanguageSubTechnologyReasponse : newGetAllLanguageSubTechnologyReasponses) {
+					newGetAllLanguageSubTechnologyReasponse.setId(codingLanguageSubTechnology2.getId());
+					newGetAllLanguageSubTechnologyReasponse.setName(codingLanguageSubTechnology2.getName());
+					newGetAllLanguageSubTechnologyReasponse
+							.setCodinglanguage_id(codingLanguageSubTechnology2.getCodinglanguage().getId());
+					allCodingLanguageSubTechnologyResponses.add(newGetAllLanguageSubTechnologyReasponse);
+				}
+			}
+		}
+		codinLanguageResponse.setId(codingLanguagegetById.getId());
+		codinLanguageResponse.setName(codingLanguagegetById.getName());
+		codinLanguageResponse.setAllCodingLanguageSubTechnologyResponses(allCodingLanguageSubTechnologyResponses);
+
+		return codinLanguageResponse;
+	}
+
+}

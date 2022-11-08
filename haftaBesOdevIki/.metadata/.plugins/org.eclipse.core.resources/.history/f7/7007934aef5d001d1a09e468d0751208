@@ -1,0 +1,9 @@
+package kodlama.io.Kodlama.io.Devs.entities.abstracts;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Table(name = "CodingLanguage")
+@Entity
+public interface CodingLanguage {
+}

@@ -1,0 +1,22 @@
+package kodlama.io.Kodlama.io.Devs.business.abstracts;
+
+import java.util.List;
+import java.util.Optional;
+
+import kodlama.io.Kodlama.io.Devs.business.responses.GetAllCodingLanguesResponse;
+import kodlama.io.Kodlama.io.Devs.entities.concretes.CodingLanguage;
+
+public interface CodingLanguegeService {
+
+	void addCodingLanguage(GetAllCodingLanguesResponse codingLanguage) throws Exception;//
+
+	void updateCodingLangue(GetAllCodingLanguesResponse codingLanguege) throws Exception;
+
+	void deleteCodingLangue(GetAllCodingLanguesResponse codingLanguege);
+
+	List<GetAllCodingLanguesResponse> listAll();
+
+	Optional<GetAllCodingLanguesResponse> getById(int id);
+
+	// https://youtu.be/7Qqb4IyULmo?t=5253
+}

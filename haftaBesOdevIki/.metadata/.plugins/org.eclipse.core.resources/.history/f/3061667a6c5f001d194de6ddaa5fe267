@@ -1,0 +1,39 @@
+package kodlama.io.Kodlama.io.Devs.entities;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+@Table(name = "codinglanguagesubtechnology")
+@Entity
+public class CodingLanguageSubTechnology {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name = "codinglanguagesubtechnology_id")
+	private int id;
+
+	@Column(name = "codinglanguagesubtechnology_name")
+	private String name;
+
+	@ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL, optional = true) // 1) CodingLanguageSubTechnology
+																					// nin bir çok satırı
+	@JoinColumn(name = "codinglanguage_id") // 3) CodingLanguageId sine eşittir
+	private CodingLanguage codingLanguage;// 2)CodingLanguage nin
+}

@@ -1,0 +1,19 @@
+package kodlama.io.Kodlama.io.Devs.business.abstracts;
+
+import java.util.List;
+import java.util.Optional;
+
+import kodlama.io.Kodlama.io.Devs.entities.concretes.CodingLanguage;
+
+public interface CodingLanguegeService {
+
+	void addCodingLanguage(CodingLanguage codingLanguage) throws Exception;//
+
+	void updateCodingLangue(CodingLanguage codingLanguege) throws Exception;
+
+	void deleteCodingLangue(CodingLanguage codingLanguege);
+
+	List<CodingLanguage> listAll();
+
+	Optional<CodingLanguage> getById(int id);
+}

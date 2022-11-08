@@ -1,0 +1,23 @@
+package kodlama.io.Kodlama.io.Devs.business.abstracts;
+
+import java.util.List;
+
+import kodlama.io.Kodlama.io.Devs.business.requests.DeleteCodingLangueRequest;
+import kodlama.io.Kodlama.io.Devs.business.requests.UpdateCodingLangueRequest;
+import kodlama.io.Kodlama.io.Devs.business.requests.CodingLangueRequests.CreateCodingLangueRequest;
+import kodlama.io.Kodlama.io.Devs.business.responses.GetAllCodingLanguesResponse;
+import kodlama.io.Kodlama.io.Devs.business.responses.GetByIdCodingLangueResponse;
+
+public interface CodingLanguegeService {
+//servisten itibaren veritabanı nesnesi kullanmıyoruz.
+	void addCodingLanguage(CreateCodingLangueRequest createCodingLangueRequest) throws Exception;//
+
+	void updateCodingLangue(UpdateCodingLangueRequest updateCodingLangueRequest) throws Exception;
+
+	void deleteCodingLangue(DeleteCodingLangueRequest deleteCodingLangueRequest);
+
+	List<GetAllCodingLanguesResponse> listAll();
+
+	GetByIdCodingLangueResponse getById(int id);
+
+}

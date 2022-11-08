@@ -1,0 +1,37 @@
+package kodlama.io.Kodlama.io.Devs.entities;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Entity
+@Table(name = "codinglanguagesubtechnology")
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+public class CodingLanguageSubTechnology {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "id")
+	private int id;
+
+	@Column(name = "name")
+	private String name;
+	
+	@Column(name="codinglanguage_id")
+	private int codinglanguageId;
+
+//	@ManyToOne
+//	@JoinColumn(name = "codinglanguage_id")
+//	private CodingLanguage codingLanguage;
+}

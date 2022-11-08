@@ -1,0 +1,12 @@
+spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.PostgreSQLDialect
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.hibernate.show-sql=true
+spring.datasource.url=jdbc:postgresql://localhost:5432/Northwind
+spring.datasource.username=postgres
+spring.datasource.password=98765
+spring.jpa.properties.javax.persistence.validation.mode = none
+<!-- https://github.com/engindemirog/Northwind-Database-Script-for-Postgre-Sql/blob/master/postgreconfig.txt -->
+<!-- Northwind defould portu 5432 dir. -->
+<!-- "password= " uygulamayi kurarken sorulan sifreyi girmeyi unutma-->
+
+<!-- "spring.jpa.hibernate.ddl-auto=update " kod ile tablo arasinda uyusmazlikta tabloyu guncelle-->

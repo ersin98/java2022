@@ -1,0 +1,60 @@
+package kodlama.io.Kodlama.io.Devs.webApi.controllers;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import kodlama.io.Kodlama.io.Devs.business.abstracts.CodingLanguegeService;
+import kodlama.io.Kodlama.io.Devs.business.requests.CodingLangueRequests.CreateCodingLangueRequest;
+import kodlama.io.Kodlama.io.Devs.business.requests.CodingLangueRequests.DeleteCodingLangueRequest;
+import kodlama.io.Kodlama.io.Devs.business.requests.CodingLangueRequests.UpdateCodingLangueRequest;
+import kodlama.io.Kodlama.io.Devs.business.responses.GetAllCodingLanguesResponse;
+import kodlama.io.Kodlama.io.Devs.business.responses.GetByIdCodingLanguageResponse;
+import kodlama.io.Kodlama.io.Devs.business.responses.GetByIdCodingLangueResponse;
+
+@RestController
+@RequestMapping("/api/codinglanguages")
+public class CodingLanguagesController {
+	// annotation yani anotasyon yaptık. Yani rest kontroller e buranın
+	// erişim noktası olduğunu dedik.
+	private CodingLanguegeService codingLanguegeService;
+
+	@Autowired
+	public CodingLanguagesController(CodingLanguegeService codingLanguegeService) { // Autowired olmasa da yazılmış gibi
+																					// davranır Autowired sayesinde
+																					// implement
+		// edeni bulur ve onun örneğini oluşturur
+		this.codingLanguegeService = codingLanguegeService;
+	}
+
+	@GetMapping("/getbyid")
+	GetByIdCodingLanguageResponse getById(int id) {
+		return codingLanguageService.getById(id);
+	}
+
+	@DeleteMapping("/delete/{id}")
+	public void deleteCodingLanguage(DeleteCodingLangueRequest deleteCodingLangueRequest) {
+		codingLanguegeService.deleteCodingLangue(deleteCodingLangueRequest);
+	}
+
+	@PutMapping("/update")
+	public void updateCodingLanguage(UpdateCodingLangueRequest updateCodingLangueRequest) throws Exception {
+		codingLanguegeService.updateCodingLangue(updateCodingLangueRequest);
+	}
+
+	@PostMapping("/add")
+	public void addCodingLanguage(CreateCodingLangueRequest createCodingLangueRequest) throws Exception {
+		codingLanguegeService.addCodingLanguage(createCodingLangueRequest);
+	}
+
+	@GetMapping("/listall")
+	public List<GetAllCodingLanguesResponse> listAll() {
+		return codingLanguegeService.listAll();
+	}
+}

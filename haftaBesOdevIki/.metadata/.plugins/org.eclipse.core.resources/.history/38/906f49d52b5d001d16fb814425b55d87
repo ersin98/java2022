@@ -1,0 +1,7 @@
+package kodlama.io.Kodlama.io.Devs.business.responses;
+
+public class GetAllCodingLanguesResponse {
+	//son kullanıcıya ( insan veya başka sistem) gönderilen bilgiler
+	private int id;
+	private String name;
+}

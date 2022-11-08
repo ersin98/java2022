@@ -1,0 +1,6 @@
+package kodlama.io.Kodlama.io.Devs.entities.abstracts;
+
+public interface CodingLanguage {
+	public static final int id = 0;
+	public static final String name = "";
+}

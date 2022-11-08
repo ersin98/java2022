@@ -1,0 +1,11 @@
+package kodlama.io.Kodlama.io.Devs.dataAccess.abstracts;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import kodlama.io.Kodlama.io.Devs.entities.concretes.CodingLanguage;
+
+public interface CodingLanguageRepository extends JpaRepository<CodingLanguage, Integer> {
+	// JpaRepository kendi içerisinde hepsini getir şuna göre getir sil gibi
+	// işlemleri kendi içinde zaten tutmaktadır
+	//concrete oluşturmamıza gerek yok çünki bellekte zaten jpa tarafından oluşturuluyor
+}
